@@ -1,6 +1,8 @@
 -- sane default settings, don't change these or get exploded
 
-vim.opt.encoding = "utf-8"
+vim.opt.encoding = "utf-8";
+
+vim.g.mapleader = " ";
 
 vim.opt.tabstop = 4;
 vim.opt.shiftwidth = 4;

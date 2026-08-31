@@ -1,6 +1,6 @@
+-- https://cmp.saghen.dev/
 local blink = require("blink.cmp")
 
--- see https://cmp.saghen.dev/
 blink.setup({
 	completion = {
 		documentation = {
@@ -16,6 +16,23 @@ blink.setup({
 				auto_insert = false,
 			},
 		},
+
+		menu = {
+			draw = {
+				columns = { { "kind_icon" }, { "label", "label_description" } },
+				components = {
+					label = {
+						-- Removes label_details from being added to label by default
+						-- See https://github.com/Saghen/blink.cmp/issues/843
+						text = function(ctx)
+							return ctx.label
+						end,
+						-- colorize each completion type
+						highlight = require("colorful-menu").blink_components_highlight,
+					},
+				},
+			},
+		}
 	},
 
 	keymap = {
@@ -29,14 +46,9 @@ blink.setup({
 		["<CR>"] = { "accept", "fallback" },
 	},
 
-	menu = {
-		draw = {
-			components = {
-				label = {
-					highlight = require("colorful-menu").blink_components_highlight,
-				}
-			}
-		}
+	signature = {
+		enabled = true,
+		window = { show_documentation = true },
 	},
 
 	sources = {
