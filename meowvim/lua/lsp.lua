@@ -1,6 +1,7 @@
 -- when adding a new lang, add the lsp server here and create an associated config file in after/lsp/
 vim.lsp.enable({
-	"nil_ls"
+	"lua_ls",
+	"nil_ls",
 })
 
 -- enable some lsp specific display options on lsp init

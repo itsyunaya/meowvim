@@ -22,6 +22,8 @@
 
 			inherit
 				(pkgs.vimPlugins)
+				blink-cmp
+				colorful-menu-nvim
 				nvim-autopairs
 				nvim-lspconfig
 				transparent-nvim
@@ -34,4 +36,8 @@
 			impure = "/home/ashley/Documents/Development/IdeaProjects/meowvim/meowvim";
 		};
 	};
+
+	extraBinPath = [
+		pkgs.lua-language-server
+	];
 }
