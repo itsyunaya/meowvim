@@ -28,6 +28,7 @@ in {
 			nvim-tree-lua
 			nvim-web-devicons
 			transparent-nvim
-			dropbar-nvim
+			nvim-navic
+			lualine-nvim
 		;
 }

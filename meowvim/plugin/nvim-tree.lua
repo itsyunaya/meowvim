@@ -6,8 +6,7 @@ require("nvim-tree").setup({
 
         -- theme
 
-        -- hide small cursor and highlight selected line
-        vim.api.nvim_set_hl(0, "NvimTreeCursorLine", { bg = "#150015" })
+        -- hide small cursor and highlight selected line through theme
         disableCursorInBuffer()
 
         -- mappings
