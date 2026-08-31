@@ -28,5 +28,6 @@ in {
 			nvim-tree-lua
 			nvim-web-devicons
 			transparent-nvim
+			dropbar-nvim
 		;
 }

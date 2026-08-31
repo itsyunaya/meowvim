@@ -9,6 +9,8 @@ vim.opt.shiftwidth = 4;
 vim.opt.softtabstop = 4;
 vim.opt.smartindent = true;
 
+vim.opt.fillchars:append({ eob = " " })
+
 vim.opt.wrap = false;
 
 vim.opt.number = true;
