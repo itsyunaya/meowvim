@@ -1,6 +1,10 @@
 
--- unmap space behaving as l
-vim.keymap.set({ "n", "x" }, "<Space>", "<Nop>")
+-- nvim
+vim.keymap.set({ "n", "x" }, "<Space>", "<Nop>") -- unmap space behaving as l
+
+-- below is an attempt at reproducing kakoune/helix motions as they are superior
+-- obviously wont be as good because of the visual mode shenanigans and everything
+require("helixRemap")
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>t", "<cmd>NvimTreeToggle<CR>", { desc = 'Toggle file tree' })

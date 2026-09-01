@@ -30,5 +30,7 @@ in {
 			nvim-navic
 			lualine-nvim
 			hop-nvim
+			multicursor-nvim
+			nvim-spider
 		;
 }
