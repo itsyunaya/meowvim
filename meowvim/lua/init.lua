@@ -6,5 +6,3 @@ require("lsp")
 require("settings")
 require("keybinds")
 require("theme")
-
-require("autocommands.transparent")

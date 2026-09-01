@@ -1,41 +1,59 @@
 require("catppuccin").setup({
     custom_highlights = function(colors)
-        local navic_icon = { fg = "#ffceff" }
+        local foreground = "#ffceff"
+        local background = "#47034e"
+        local fuckassgrey = "#676767"
+
         return {
             -- the horrors
-            NavicIconsFile          = navic_icon,
-            NavicIconsModule        = navic_icon,
-            NavicIconsNamespace     = navic_icon,
-            NavicIconsPackage       = navic_icon,
-            NavicIconsClass         = navic_icon,
-            NavicIconsMethod        = navic_icon,
-            NavicIconsProperty      = navic_icon,
-            NavicIconsField         = navic_icon,
-            NavicIconsConstructor   = navic_icon,
-            NavicIconsEnum          = navic_icon,
-            NavicIconsInterface     = navic_icon,
-            NavicIconsFunction      = navic_icon,
-            NavicIconsVariable      = navic_icon,
-            NavicIconsConstant      = navic_icon,
-            NavicIconsString        = navic_icon,
-            NavicIconsNumber        = navic_icon,
-            NavicIconsBoolean       = navic_icon,
-            NavicIconsArray         = navic_icon,
-            NavicIconsObject        = navic_icon,
-            NavicIconsKey           = navic_icon,
-            NavicIconsNull          = navic_icon,
-            NavicIconsEnumMember    = navic_icon,
-            NavicIconsStruct        = navic_icon,
-            NavicIconsEvent         = navic_icon,
-            NavicIconsOperator      = navic_icon,
-            NavicIconsTypeParameter = navic_icon,
+            NavicIconsFile          = {fg = foreground },
+            NavicIconsModule        = {fg = foreground },
+            NavicIconsNamespace     = {fg = foreground },
+            NavicIconsPackage       = {fg = foreground },
+            NavicIconsClass         = {fg = foreground },
+            NavicIconsMethod        = {fg = foreground },
+            NavicIconsProperty      = {fg = foreground },
+            NavicIconsField         = {fg = foreground },
+            NavicIconsConstructor   = {fg = foreground },
+            NavicIconsEnum          = {fg = foreground },
+            NavicIconsInterface     = {fg = foreground },
+            NavicIconsFunction      = {fg = foreground },
+            NavicIconsVariable      = {fg = foreground },
+            NavicIconsConstant      = {fg = foreground },
+            NavicIconsString        = {fg = foreground },
+            NavicIconsNumber        = {fg = foreground },
+            NavicIconsBoolean       = {fg = foreground },
+            NavicIconsArray         = {fg = foreground },
+            NavicIconsObject        = {fg = foreground },
+            NavicIconsKey           = {fg = foreground },
+            NavicIconsNull          = {fg = foreground },
+            NavicIconsEnumMember    = {fg = foreground },
+            NavicIconsStruct        = {fg = foreground },
+            NavicIconsEvent         = {fg = foreground },
+            NavicIconsOperator      = {fg = foreground },
+            NavicIconsTypeParameter = {fg = foreground },
 
             -- navic
-            NavicText       = {fg = "#ffceff" },
-            NavicSeparator  = {fg = "#676767" },
+            NavicText       = {fg = foreground },
+            NavicSeparator  = {fg = fuckassgrey },
+            WinBar = { underline = true, sp = foreground },
 
             -- nvim-tree
-            NvimTreeCursorLine = {bg = "#150015"}
+            NvimTreeCursorLine = {bg = background},
+            NvimTreeNormal = {bg = "NONE"},
+            NvimTreeNormalNC = {bg = "NONE"},
+            NvimTreeNormalEndOfBuffer = {bg = "NONE"},
+            NvimTreeWinSeparator = { bg = "NONE", fg = foreground},
+            NvimTreeWinbarTitle = { fg = foreground},
+
+            -- nvim
+            CursorLine = { bg = background },
+            -- transparency
+            Normal = { bg = "NONE" },
+            NormalNC = { bg = "NONE" },
+            NormalFloat = { bg = "NONE" },
+            SignColumn = { bg = "NONE" },
+            EndOfBuffer = { bg = "NONE" },
         }
     end,
 })

@@ -27,7 +27,6 @@ in {
 			nvim-lspconfig
 			nvim-tree-lua
 			nvim-web-devicons
-			transparent-nvim
 			nvim-navic
 			lualine-nvim
 		;
