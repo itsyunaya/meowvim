@@ -1,6 +1,7 @@
 require("catppuccin").setup({
     custom_highlights = function(colors)
         local foreground = "#ffceff"
+        local foreground2 = "#ff55ff"
         local background = "#47034e"
         local fuckassgrey = "#676767"
 
@@ -45,6 +46,12 @@ require("catppuccin").setup({
             NvimTreeNormalEndOfBuffer = {bg = "NONE"},
             NvimTreeWinSeparator = { bg = "NONE", fg = foreground},
             NvimTreeWinbarTitle = { fg = foreground},
+
+            -- hop
+            HopNextKey = {fg = foreground},
+            HopNextKey1 = {fg = foreground},
+            HopNextKey2 = {fg = foreground2},
+            HopUnmatched = {fg = fuckassgrey},
 
             -- nvim
             CursorLine = { bg = background },

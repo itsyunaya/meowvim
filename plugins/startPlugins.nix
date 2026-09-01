@@ -29,5 +29,6 @@ in {
 			nvim-web-devicons
 			nvim-navic
 			lualine-nvim
+			hop-nvim
 		;
 }
