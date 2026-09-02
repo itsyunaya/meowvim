@@ -10,6 +10,7 @@
 		luadoc
 		nix
 		rust
+		markdown
 	]);
 in {
 	cmdline = callPackage ./startPlugins/cmdline.nix {};
@@ -34,5 +35,6 @@ in {
 			lualine-nvim
 			plenary-nvim
 			telescope-nvim
+		    render-markdown-nvim	 	
 		;
 }

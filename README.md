@@ -16,3 +16,7 @@ coming soon
 - fix git sidebar thingy
 - terminal plugin
 - maybe some autosave on switching files
+
+> [!NOTE]
+>
+> my paws are really big
