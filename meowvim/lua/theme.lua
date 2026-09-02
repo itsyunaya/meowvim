@@ -1,8 +1,8 @@
 require("catppuccin").setup({
-    custom_highlights = function(colors)
+    custom_highlights = function()
         local foreground = "#ffceff"
         local foreground2 = "#ff55ff"
-        local background = "#47034e"
+        local background = "#222222"
         local fuckassgrey = "#676767"
 
         return {

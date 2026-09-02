@@ -20,5 +20,8 @@
 		# many different things and could cause rust version mismatches
 		pkgs.lua-language-server
 		pkgs.nil
+
+		pkgs.ripgrep
+		pkgs.fd
 	];
 }

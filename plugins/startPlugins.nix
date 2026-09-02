@@ -21,16 +21,18 @@ in {
 			blink-cmp
 			catppuccin-nvim
 			colorful-menu-nvim
+			hop-nvim
 			mini-notify
+			multicursor-nvim
 			nvim-autopairs
 			nvim-highlight-colors
 			nvim-lspconfig
+			nvim-navic
+			nvim-spider
 			nvim-tree-lua
 			nvim-web-devicons
-			nvim-navic
 			lualine-nvim
-			hop-nvim
-			multicursor-nvim
-			nvim-spider
+			plenary-nvim
+			telescope-nvim
 		;
 }
