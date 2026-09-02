@@ -7,8 +7,6 @@
 local mc = require("multicursor-nvim")
 mc.setup()
 
--- todo add spider plugin
-
 -- d to delete selection
 vim.keymap.set({"n", "v"}, "d", "x", { noremap = true })
 

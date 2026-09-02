@@ -14,8 +14,6 @@ require("nvim-tree").setup({
         -- hl also opens the file so you can nav with hjkl
         vim.keymap.set("n", "l", treeApi.node.open.edit, { desc = "Open Tree", buffer = bufnr, nowait = true, })
         vim.keymap.set("n", "h", treeApi.node.open.edit, { desc = "Open Tree", buffer = bufnr, nowait = true, })
-        -- escape leaves the buffer
-        vim.keymap.set("n", "<Esc>", "<C-w>l", { desc = "Move to right window" })
     end,
 
     renderer = {
