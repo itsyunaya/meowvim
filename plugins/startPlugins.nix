@@ -27,7 +27,10 @@ in {
 			nvim-lspconfig
 			nvim-tree-lua
 			nvim-web-devicons
-			transparent-nvim
-			dropbar-nvim
+			nvim-navic
+			lualine-nvim
+			hop-nvim
+			multicursor-nvim
+			nvim-spider
 		;
 }

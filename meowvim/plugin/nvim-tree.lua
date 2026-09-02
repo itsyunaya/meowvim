@@ -6,18 +6,25 @@ require("nvim-tree").setup({
 
         -- theme
 
-        -- hide small cursor and highlight selected line
-        vim.api.nvim_set_hl(0, "NvimTreeCursorLine", { bg = "#150015" })
         disableCursorInBuffer()
+        displayNodeInWinbar(treeApi, bufnr)
 
         -- mappings
 
         -- hl also opens the file so you can nav with hjkl
         vim.keymap.set("n", "l", treeApi.node.open.edit, { desc = "Open Tree", buffer = bufnr, nowait = true, })
         vim.keymap.set("n", "h", treeApi.node.open.edit, { desc = "Open Tree", buffer = bufnr, nowait = true, })
-        -- escape leaves the buffer
-        vim.keymap.set("n", "<Esc>", "<C-w>l", { desc = "Move to right window" })
     end,
+
+    renderer = {
+        root_folder_label = false, -- hide parent folder
+    },
+
+
+    -- hide custom patterns here if ever
+    filters = {
+        custom = {},
+    },
 })
 
 function disableCursorInBuffer()
@@ -36,6 +43,25 @@ function disableCursorInBuffer()
             local def = vim.api.nvim_get_hl_by_name('Cursor', true)
             vim.api.nvim_set_hl(0, 'Cursor', vim.tbl_extend('force', def, { blend = 0 }))
             vim.opt.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20'
+        end,
+    })
+end
+
+function displayNodeInWinbar(treeApi, bufnr)
+    vim.api.nvim_create_autocmd({ "CursorMoved", "BufEnter", "WinEnter" }, {
+        buffer = bufnr,
+        callback = function()
+            local node = treeApi.tree.get_node_under_cursor()
+            local ending = ""
+            local icon = ""
+
+            if node.type == "directory" then
+                ending = "/"
+                icon = " "
+            else
+                icon = require("nvim-web-devicons").get_icon(node.name, node.extension, { default = true }) .. " "
+            end
+            vim.wo.winbar = "%#NvimTreeWinbarTitle# ".. icon .. node.name .. ending
         end,
     })
 end
