@@ -41,11 +41,22 @@ require("catppuccin").setup({
 
             -- nvim-tree
             NvimTreeCursorLine = {bg = background},
-            NvimTreeNormal = {bg = "NONE"},
+            NvimTreeNormal = {bg = "NONE", fg = foreground},
             NvimTreeNormalNC = {bg = "NONE"},
             NvimTreeNormalEndOfBuffer = {bg = "NONE"},
             NvimTreeWinSeparator = { bg = "NONE", fg = foreground},
             NvimTreeWinbarTitle = { fg = foreground},
+            -- default jetbrains scheme
+            NvimTreeGitDirty = {fg = "#87cefa"},
+            NvimTreeGitStaged = { fg = "#629755" },
+            NvimTreeGitNew = { fg = "#32cd32" },
+            NvimTreeGitDeleted = { fg = "#616161" },
+            NvimTreeGitIgnored = { fg = "#fcc200" },
+            NvimTreeGitMerge = { fg = "#9876AA" },
+            NvimTreeGitRenamed = { fg = "#6897BB" },
+            NvimTreeFolderName = { fg = foreground },
+            NvimTreeSpecialFile = { fg = foreground },
+            NvimTreeOpenedFolderName = { fg = foreground },
 
             -- hop
             HopNextKey = {fg = foreground},

@@ -44,9 +44,6 @@ vim.keymap.set("n", "s", mc.searchAllAddCursors)
 vim.g.loaded_matchit = 1
 vim.keymap.set({ "n", "v" }, "%", function() selectWholeFile() end, { noremap = true })
 
--- todo stuff past chapter 5.4
-
-
 function clearCursorsAndSelection()
     if (mc.hasCursors()) then mc.clearCursors() end
     vim.cmd("normal! \27")

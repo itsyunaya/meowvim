@@ -1,6 +1,5 @@
 -- https://github.com/nvim-tree/nvim-tree.lua
 
-
 local function disableCursorInBuffer()
     vim.api.nvim_create_autocmd({ 'WinEnter', 'BufWinEnter' }, {
         pattern = 'NvimTree*',
@@ -59,12 +58,19 @@ require("nvim-tree").setup({
 
     renderer = {
         root_folder_label = false, -- hide parent folder
+        highlight_git = "name",
+        icons = {
+            show = { git = false, }, -- also hide git status icon
+        },
     },
-
 
     -- hide custom patterns here if ever
     filters = {
         custom = {},
+    },
+
+    git = { -- show gitignored files (why is this disabled by default)
+        ignore = false,
     },
 })
 
