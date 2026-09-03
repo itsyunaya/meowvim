@@ -23,6 +23,7 @@ in {
 			catppuccin-nvim
 			colorful-menu-nvim
 			conform-nvim
+			vim-fugitive
 			hop-nvim
 			mini-notify
 			multicursor-nvim
