@@ -71,6 +71,14 @@ require("nvim-tree").setup({
 
     git = { -- show gitignored files (why is this disabled by default)
         ignore = false,
+		show_on_dirs = true,
+		show_on_open_dirs = false,
     },
+
+	modified = { -- unsaved changes
+		enable = true,
+		show_on_dirs = true,
+		show_on_open_dirs = false,
+	},
 })
 

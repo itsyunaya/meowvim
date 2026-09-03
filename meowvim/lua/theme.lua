@@ -57,6 +57,7 @@ require("catppuccin").setup({
             NvimTreeFolderName = { fg = foreground },
             NvimTreeSpecialFile = { fg = foreground },
             NvimTreeOpenedFolderName = { fg = foreground },
+			NvimTreeModifiedIcon = { fg = fuckassgrey },
 
             -- hop
             HopNextKey = {fg = foreground},
