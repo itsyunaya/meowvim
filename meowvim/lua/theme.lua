@@ -68,6 +68,8 @@ require("catppuccin").setup({
 
             -- nvim
             CursorLine = { bg = background },
+			StatusLine = { bg = "NONE" },
+			StatusLineNC = { bg = "NONE" },
             -- transparency
             Normal = { bg = "NONE" },
             NormalNC = { bg = "NONE" },
