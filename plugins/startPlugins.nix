@@ -22,6 +22,7 @@ in {
 			blink-cmp
 			catppuccin-nvim
 			colorful-menu-nvim
+			conform-nvim
 			hop-nvim
 			mini-notify
 			multicursor-nvim
@@ -34,7 +35,7 @@ in {
 			nvim-web-devicons
 			lualine-nvim
 			plenary-nvim
-			telescope-nvim
 		    render-markdown-nvim	 	
+			telescope-nvim
 		;
 }

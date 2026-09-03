@@ -19,3 +19,8 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 
 -- render-markdown
 vim.keymap.set('n', '<leader>m', '<cmd>RenderMarkdown toggle<CR>', { desc = 'Render Markdown' })
+
+-- conform
+vim.keymap.set("n", "<leader>l", function ()
+	require("conform").format({ bufnr = 0 })
+end, { desc = "Format the current buffer" })
