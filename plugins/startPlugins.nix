@@ -14,6 +14,7 @@
 	]);
 in {
 	cmdline = callPackage ./startPlugins/cmdline.nix {};
+	hydra = callPackage ./startPlugins/hydra.nix {};
 
 	inherit treesitter;
 

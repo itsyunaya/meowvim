@@ -1,8 +1,6 @@
 
 -- nvim
 vim.keymap.set({ "n", "x" }, "<Space>", "<Nop>") -- unmap space behaving as l
-vim.keymap.set({ "n" }, "<leader><Tab>", "<cmd>bnext<CR>", {desc = "Next Buffer"})
-vim.keymap.set({ "n" }, "<leader><S-Tab>", "<cmd>bprevious<CR>", {desc = "Prev Buffer"})
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>t", "<cmd>NvimTreeToggle<CR>", { desc = 'Toggle file tree' })
@@ -28,4 +26,4 @@ vim.keymap.set("n", "<leader>l", function ()
 end, { desc = "Format the current buffer" })
 
 -- toggleterm
-vim.keymap.set({'n', 't'}, '<leader>q', '<cmd>ToggleTerm<CR>', { desc = 'Toggle Terminal' })
+vim.keymap.set({"n", "t"}, "<leader>q", "<cmd>ToggleTerm<CR>", { desc = 'Toggle Terminal' })
