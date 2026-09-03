@@ -14,6 +14,7 @@ coming soon
 - continue helix mappings past chap 5.4
  - indent and comment keybinds
 - git add on creating new file lol
+- tabs on winbar
 
 > [!NOTE]
 >

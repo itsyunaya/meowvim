@@ -33,6 +33,7 @@ require('lualine').setup {
     section_separators = { left = '', right = '' },
     disabled_filetypes = {
 		statusline = { "NvimTree" },
+		winbar = { "NvimTree" }
     },
 },
   sections = {
@@ -53,4 +54,29 @@ require('lualine').setup {
   },
   tabline = {},
   extensions = {},
+  winbar = {
+	  lualine_a = {{
+		'buffers',
+		buffers_color = {
+			active = { fg = colors.black, bg = colors.pink },
+			inactive = { fg = colors.pink, bg = colors.grey },
+		},
+		symbols = {
+			alternate_file = '',
+		}
+	  }},
+  },
+
+  inactive_winbar = {
+	  lualine_a = {{
+		'buffers',
+		buffers_color = {
+			active = { fg = colors.black, bg = colors.pink },
+			inactive = { fg = colors.pink, bg = colors.grey },
+		},
+		symbols = {
+			alternate_file = '',
+		}
+	  }},
+  },
 }

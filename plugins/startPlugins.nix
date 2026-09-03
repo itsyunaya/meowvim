@@ -39,6 +39,6 @@ in {
 		    render-markdown-nvim	 	
 			telescope-nvim
 			gitsigns-nvim
-			toggleterm-nvim
-		;
+			toggleterm-nvim	
+		; 
 }
