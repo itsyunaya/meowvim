@@ -34,7 +34,7 @@ local function displayNodeInWinbar(treeApi, bufnr)
             else
                 icon = require("nvim-web-devicons").get_icon(node.name, node.extension, { default = true }) .. " "
             end
-            vim.wo.winbar = "%#NvimTreeWinbarTitle# ".. icon .. node.name .. ending
+            vim.wo.winbar = " %#NvimTreeWinbarTitle# ".. icon .. node.name .. ending
         end,
     })
 end
@@ -57,11 +57,29 @@ require("nvim-tree").setup({
     end,
 
     renderer = {
-        root_folder_label = false, -- hide parent folder
+        root_folder_label = function()
+			return ""
+		end, -- make parent folder an empty line
         highlight_git = "name",
         icons = {
-            show = { git = false, }, -- also hide git status icon
+            show = {
+				git = false,
+				folder_arrow = false,
+			},
         },
+
+		indent_width = 2,
+		indent_markers = {
+			enable = true,
+			inline_arrows = true,
+			icons = {
+				corner = "╰",
+				edge = "│",
+				item = "├",
+				bottom = "─",
+				none = " ",
+			},
+		},
     },
 
     -- hide custom patterns here if ever
