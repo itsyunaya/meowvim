@@ -38,5 +38,6 @@ in {
 			plenary-nvim
 		    render-markdown-nvim	 	
 			telescope-nvim
+			gitsigns-nvim
 		;
 }
