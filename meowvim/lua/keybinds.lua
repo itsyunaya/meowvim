@@ -24,3 +24,6 @@ vim.keymap.set('n', '<leader>m', '<cmd>RenderMarkdown toggle<CR>', { desc = 'Ren
 vim.keymap.set("n", "<leader>l", function ()
 	require("conform").format({ bufnr = 0 })
 end, { desc = "Format the current buffer" })
+
+-- toggleterm
+vim.keymap.set({'n', 't'}, '<leader>q', '<cmd>ToggleTerm<CR>', { desc = 'Toggle Terminal' })
