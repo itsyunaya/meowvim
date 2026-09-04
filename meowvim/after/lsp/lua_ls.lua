@@ -5,7 +5,7 @@ return {
 			diagnostics = {
 				-- gets rid of "undefined global var"
 				globals = { "vim" },
-			}
-		}
-	}
+			},
+		},
+	},
 }

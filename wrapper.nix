@@ -21,6 +21,8 @@
 		pkgs.lua-language-server
 		pkgs.nil
 
+		pkgs.stylua
+
 		pkgs.ripgrep
 		pkgs.fd
 	];

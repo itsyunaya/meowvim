@@ -32,12 +32,12 @@ blink.setup({
 					},
 				},
 			},
-		}
+		},
 	},
 
 	keymap = {
 		-- turn off the default preset so we are forced to get accustomed to vim motions
-		preset = "none";
+		preset = "none",
 
 		["<C-j>"] = { "select_next", "fallback" },
 		["<C-k>"] = { "select_prev", "fallback" },
@@ -53,5 +53,5 @@ blink.setup({
 
 	sources = {
 		default = { "lsp", "buffer", "snippets", "path", "omni" },
-	}
+	},
 })

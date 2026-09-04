@@ -1,3 +1,3 @@
 require("render-markdown").setup({
-	enabled = false
+	enabled = false,
 })

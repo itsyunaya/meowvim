@@ -17,5 +17,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				border = "rounded",
 			},
 		})
-	end
+	end,
 })
