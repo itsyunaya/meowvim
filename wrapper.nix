@@ -6,6 +6,7 @@
 
 	plugins = {
 		startAttrs = import ./plugins/startPlugins.nix { inherit pkgs; };
+		start = import ./plugins/treesitter.nix { inherit pkgs; };
 
 		dev.conf = {
 			pure = ./meowvim;
