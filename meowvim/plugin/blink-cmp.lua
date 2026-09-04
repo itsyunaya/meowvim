@@ -53,5 +53,12 @@ blink.setup({
 
 	sources = {
 		default = { "lsp", "buffer", "snippets", "path", "omni" },
+		per_filetype = {
+			lua = { "lazydev", "lsp", "path", "snippets", "omni" },
+		},
+
+		providers = {
+			lazydev = { name = "LazyDev", module = "lazydev.integrations.blink", score_offset = 100 },
+		},
 	},
 })
