@@ -1,6 +1,7 @@
 ### lei todos: 
 
-- some TODO plugin or something idk
+ TODO: move these to proper todos with our new fancy plugin
+
 - separate theme
 - continue helix mappings past chap 5.4
  - indent and comment keybinds

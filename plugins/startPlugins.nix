@@ -32,5 +32,6 @@ in {
 		telescope-nvim
 		toggleterm-nvim
 		vim-fugitive
+		todo-comments-nvim
 		;
 }
