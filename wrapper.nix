@@ -1,4 +1,5 @@
-{ pkgs, mnw }: mnw.lib.wrap pkgs {
+{ pkgs, mnw }:
+mnw.lib.wrap pkgs {
 	appName = "meowvim";
 	aliases = [ "vi" "nvm" ];
 
@@ -7,6 +8,7 @@
 	plugins = {
 		startAttrs = import ./plugins/startPlugins.nix { inherit pkgs; };
 		start = import ./plugins/treesitter.nix { inherit pkgs; };
+		optAttrs = import ./plugins/optPlugins.nix { inherit pkgs; };
 
 		dev.conf = {
 			pure = ./meowvim;

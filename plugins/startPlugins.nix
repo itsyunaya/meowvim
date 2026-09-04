@@ -12,8 +12,10 @@ in {
 		catppuccin-nvim
 		colorful-menu-nvim
 		conform-nvim
-		vim-fugitive
+		gitsigns-nvim
 		hop-nvim
+		lualine-nvim
+		lz-n
 		mini-notify
 		multicursor-nvim
 		nvim-autopairs
@@ -23,11 +25,10 @@ in {
 		nvim-spider
 		nvim-tree-lua
 		nvim-web-devicons
-		lualine-nvim
 		plenary-nvim
 		render-markdown-nvim
 		telescope-nvim
-		gitsigns-nvim
 		toggleterm-nvim
+		vim-fugitive
 		;
 }
