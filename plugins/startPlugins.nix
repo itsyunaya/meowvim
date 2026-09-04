@@ -5,6 +5,8 @@
 in {
 	cmdline = callPackage ./startPlugins/cmdline.nix {};
 	hydra = callPackage ./startPlugins/hydra.nix {};
+	project = callPackage ./startPlugins/project.nix {};
+	session-manager = callPackage ./startPlugins/session-manager.nix {};
 
 	inherit
 		(pkgs.vimPlugins)
