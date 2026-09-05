@@ -2,6 +2,7 @@
 vim.lsp.enable({
 	"lua_ls",
 	"nil_ls",
+	"tinymist",
 })
 
 -- enable some lsp specific display options on lsp init

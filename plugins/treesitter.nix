@@ -7,5 +7,6 @@
 			luadoc
 			nix
 			rust
+			typst
 		]);
 in [ treesitter ]

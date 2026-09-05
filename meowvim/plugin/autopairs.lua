@@ -3,15 +3,16 @@ local npairs = require("nvim-autopairs")
 local Rule = require("nvim-autopairs.rule")
 local cond = require("nvim-autopairs.conds")
 local utils = require("nvim-autopairs.utils")
-local ts_conds = require('nvim-autopairs.ts-conds')
 
 npairs.setup()
 
 -- npairs wiki has some super useful predefined custom rules
 -- https://github.com/windwp/nvim-autopairs/wiki/Custom-rules
 
+AP_utils = {}
+
 -- when pressing space, after opening a parenthesis, another is automatically added at the end
-local function insert_with_surrounding_check(a1, ins, a2, lang)
+AP_utils.surrounding_char = function(a1, ins, a2, lang)
 	npairs.add_rule(Rule(ins, ins, lang)
 		:with_pair(function(opts)
 			return a1 .. a2 == opts.line:sub(opts.col - #a1, opts.col + #a2 - 1)
@@ -42,8 +43,8 @@ local is_not_ts_node_comment_one_back = function()
 	end
 end
 
-insert_with_surrounding_check("(", " ", ")")
-insert_with_surrounding_check("[", " ", "]")
-insert_with_surrounding_check("{", " ", "}")
+AP_utils.surrounding_char("(", " ", ")")
+AP_utils.surrounding_char("[", " ", "]")
+AP_utils.surrounding_char("{", " ", "}")
 
 npairs.add_rule(Rule("= ", ";", "nix"):with_pair(is_not_ts_node_comment_one_back()):set_end_pair_length(1))
