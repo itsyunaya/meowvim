@@ -1,19 +1,22 @@
 -- sane default settings, don't change these or get exploded
+-- try to use vim.o over vim.opt when possible, since opt is a wrapper around o and slightly slower
 
-vim.opt.encoding = "utf-8"
+vim.o.encoding = "utf-8"
 
 vim.g.mapleader = " "
 vim.o.mouse = ""
 
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
-vim.opt.smartindent = true
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
+vim.o.smartindent = true
 
 vim.opt.fillchars:append({ eob = " " })
-vim.opt.cursorline = true
+vim.o.cursorline = true
 
-vim.opt.wrap = false
+vim.o.wrap = false
 
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.o.number = true
+vim.o.relativenumber = true
+
+vim.o.showmode = false
