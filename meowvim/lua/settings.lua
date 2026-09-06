@@ -3,6 +3,7 @@
 vim.opt.encoding = "utf-8"
 
 vim.g.mapleader = " "
+vim.o.mouse = ""
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
