@@ -29,5 +29,7 @@ mnw.lib.wrap pkgs {
 
 		pkgs.ripgrep
 		pkgs.fd
+
+		pkgs.nodejs-slim # needed by the md previewer, remove if we ever stop using it
 	];
 }

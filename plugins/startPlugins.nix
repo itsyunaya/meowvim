@@ -28,7 +28,6 @@ in {
 		nvim-tree-lua
 		nvim-web-devicons
 		plenary-nvim
-		render-markdown-nvim
 		telescope-nvim
 		toggleterm-nvim
 		vim-fugitive
