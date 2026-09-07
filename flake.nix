@@ -3,15 +3,20 @@
 
 	inputs = {
 		mnw.url = "github:Gerg-L/mnw";
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst";
+		
+		nvim-source = {
+			url = "github:neovim/neovim";
+			flake = false;
+		};
 	};
 
-	outputs = { self, nixpkgs, mnw }: let
+	outputs = { self, nixpkgs, mnw, nvim-source }: let
 		systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
 		forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
 	in {
 		packages = forAllSystems (pkgs: let
-			nvim = import ./wrapper.nix { inherit pkgs mnw; };
+			nvim = import ./wrapper.nix { inherit pkgs mnw nvim-source; };
 		in {
 			default = nvim;
 			inherit nvim;

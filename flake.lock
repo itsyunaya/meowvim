@@ -17,24 +17,38 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1788039129,
-        "narHash": "sha256-pa4Q0qErvCvzCaaUph7Sm37RhR4xvPrYI8Lgz6k85+A=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "d2f67949798825fe853f7c5d0492b8bf016d3f88",
+        "lastModified": 1788614874,
+        "narHash": "sha256-PRK1fSEiAcO29DkUoOlsVLGYRK3h1YKVr+qQJB0VcYQ=",
+        "rev": "c043004d1c6985732bcc1cbc5a9c9aecbbb4e0f0",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1068089.c043004d1c69/nixexprs.tar.zst"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
+      }
+    },
+    "nvim-source": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788784257,
+        "narHash": "sha256-5aY6Nb+VPhTEPcVhK/vdg4HuCpT45psVTnwHwtAv9BQ=",
+        "owner": "neovim",
+        "repo": "neovim",
+        "rev": "fdf071959e3b913e56a10f227f034b530a90be99",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
+        "owner": "neovim",
+        "repo": "neovim",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
         "mnw": "mnw",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nvim-source": "nvim-source"
       }
     }
   },

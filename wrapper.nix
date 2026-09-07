@@ -1,7 +1,14 @@
-{ pkgs, mnw }:
+{ pkgs, mnw, nvim-source }:
 mnw.lib.wrap pkgs {
 	appName = "meowvim";
 	aliases = [ "vi" "nvm" ];
+
+	neovim = pkgs.neovim-unwrapped.overrideAttrs {
+		doCheck = false;
+		doInstallCheck = false;
+
+		src = nvim-source;
+	};
 
 	initLua = ''require("init")'';
 
@@ -13,7 +20,7 @@ mnw.lib.wrap pkgs {
 		dev.conf = {
 			pure = ./meowvim;
 			# todo: unhardcode
-			impure = "/home/ashley/Documents/Development/IdeaProjects/meowvim/meowvim";
+			impure = "/home/ashley/Documents/projects/meowvim/meowvim";
 		};
 	};
 
