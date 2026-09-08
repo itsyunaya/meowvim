@@ -15,6 +15,7 @@ in {
 		colorful-menu-nvim
 		conform-nvim
 		gitsigns-nvim
+		hardtime-nvim
 		hop-nvim
 		lualine-nvim
 		lz-n
