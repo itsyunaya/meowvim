@@ -25,6 +25,7 @@ in {
 		nvim-highlight-colors
 		nvim-lspconfig
 		nvim-navic
+		nvim-surround
 		nvim-spider
 		nvim-tree-lua
 		nvim-web-devicons
