@@ -1,2 +1,10 @@
 ---@type vim.lsp.Config
-return {}
+return {
+	settings = {
+		["rust-analyzer"] = {
+			check = {
+				command = "clippy"
+			}
+		}
+	}
+}
