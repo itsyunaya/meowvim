@@ -5,6 +5,7 @@ require("conform").setup({
 		-- if it's detected in $PATH, which it only will be in devshells, it'll be used first
 		nix = { "nixfmt", "alejandra", stop_after_first = true },
 		lua = { "stylua" },
+		rust = { "rustfmt" },
 	},
 
 	formatters = {
