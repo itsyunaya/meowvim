@@ -6,11 +6,13 @@ require("conform").setup({
 		nix = { "nixfmt", "alejandra", stop_after_first = true },
 		lua = { "stylua" },
 		rust = { "rustfmt" },
+		kotlin = { "ktlint" },
 	},
 
 	formatters = {
 		alejandra = {
 			-- this will error if not on my fork of alejandra
+			-- TODO: make it not do that
 			append_args = { "--config-str", 'indentation = "Tabs"; enable_inline_spacing = true' },
 		},
 	},
