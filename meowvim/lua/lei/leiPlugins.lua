@@ -1,3 +1,5 @@
+require("toggleterm").setup({})
+
 require("neovim-project").setup({
 	projects = {
 		"~/Projects/*",

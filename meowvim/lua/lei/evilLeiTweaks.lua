@@ -8,3 +8,10 @@ vim.cmd("wincmd p")
 vim.keymap.set('n', 'gw', function() hopCommandWrapped("HopWord") end, { desc = 'Hop to Words' })
 vim.keymap.set('n', 'gl', function() hopCommandWrapped("HopLine") end, { desc = 'Hop to Lines' })
 vim.keymap.set('n', 'gs', function() hopCommandWrapped("HopPattern") end, { desc = 'Hop to Pattern' })
+
+-- toggleterm
+vim.keymap.set({ "n", "t" }, "<leader>q", "<cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })
+
+-- telescope
+vim.keymap.set("n", "<leader>fp", "<cmd>NeovimProjectDiscover history<CR>", { desc = "Telescope projects" })
+

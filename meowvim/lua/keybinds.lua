@@ -15,7 +15,6 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find f
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
-vim.keymap.set("n", "<leader>fp", "<cmd>NeovimProjectDiscover history<CR>", { desc = "Telescope projects" })
 vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Telescope Todos" })
 
 -- render-markdown
@@ -26,5 +25,3 @@ vim.keymap.set("n", "<leader>l", function()
 	require("conform").format({ bufnr = 0 })
 end, { desc = "Format the current buffer" })
 
--- toggleterm
-vim.keymap.set({ "n", "t" }, "<leader>q", "<cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })

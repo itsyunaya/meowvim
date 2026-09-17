@@ -5,6 +5,8 @@
 in {
 	cmdline = callPackage ./startPlugins/cmdline.nix {};
 	hydra = callPackage ./startPlugins/hydra.nix {};
+
+	# lei specific custom
 	project = callPackage ./startPlugins/project.nix {};
 	session-manager = callPackage ./startPlugins/session-manager.nix {};
 
@@ -20,19 +22,22 @@ in {
 		lualine-nvim
 		lz-n
 		mini-notify
-		multicursor-nvim
 		nvim-autopairs
 		nvim-highlight-colors
 		nvim-lspconfig
 		nvim-navic
 		nvim-surround
-		nvim-spider
 		nvim-tree-lua
 		nvim-web-devicons
 		plenary-nvim
 		telescope-nvim
-		toggleterm-nvim
+		tiny-inline-diagnostic-nvim
 		vim-fugitive
 		todo-comments-nvim
+
+		# lei specific
+		multicursor-nvim
+		nvim-spider
+		toggleterm-nvim
 		;
 }

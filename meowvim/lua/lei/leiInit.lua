@@ -17,5 +17,7 @@ vim.schedule(function()
         require("lei.helixRemap")
         -- other personal changes like keybinds or stuff
         require("lei.evilLeiTweaks")
+
+		require("lei.leiPlugins")
     end
 end)

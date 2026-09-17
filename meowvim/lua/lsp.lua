@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.lsp.inlay_hint.enable(true)
 
 		vim.diagnostic.config({
-			virtual_text = true,
+			virtual_text = false,
 			severity_sort = true,
 			signs = false,
 			float = {
