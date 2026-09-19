@@ -5,6 +5,12 @@ vim.api.nvim_create_user_command("ToggleLei", function()
 	print("ENABLE_LEI = " .. tostring(vim.g.ENABLE_LEI))
 end, {})
 
+-- TODO make project goober cd into dir for nvimtree
+-- TODO fix terminal job slop (surely)
+-- TODO get comment.nvim for commentline key (ough)
+-- TODO make d not put shit into copy register
+-- TODO fix nvim tree not opening
+
 vim.schedule(function()
 	if vim.g.ENABLE_LEI == nil then
 		vim.g.ENABLE_LEI = false

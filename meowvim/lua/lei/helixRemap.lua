@@ -44,6 +44,11 @@ vim.keymap.set("n", "s", mc.searchAllAddCursors)
 vim.g.loaded_matchit = 1
 vim.keymap.set({ "n", "v" }, "%", function() selectWholeFile() end, { noremap = true })
 
+
+-- c properly acts as a di alias (for single char selections)
+vim.keymap.set({"n", "v"}, "c", "di", { noremap = true })
+
+
 function clearCursorsAndSelection()
     if (mc.hasCursors()) then mc.clearCursors() end
     vim.cmd("normal! \27")
@@ -77,7 +82,7 @@ function helixLineSelect(grow)
     end
 end
 
-function helixMotion(motion)
+function helixMotion(motion, extend)
     local count = vim.v.count > 0 and tostring(vim.v.count) or ""
     local mode = vim.fn.mode()
     local in_visual = mode == "v" or mode == "V" or mode == "\22"
