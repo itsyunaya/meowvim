@@ -7,6 +7,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		rust = { "rustfmt" },
 		kotlin = { "ktlint" },
+		cpp = { "clang_format" },
 	},
 
 	formatters = {

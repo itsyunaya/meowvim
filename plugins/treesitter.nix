@@ -7,6 +7,10 @@
 			lua
 			typst
 
+			# things i'm currently messing around with
+			cpp
+			cmake
+
 			# jvm
 			java
 			kotlin
