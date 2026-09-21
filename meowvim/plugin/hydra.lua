@@ -1,3 +1,4 @@
+-- https://github.com/nvimtools/hydra.nvim
 local Hydra = require("hydra")
 
 -- i love this thing <333

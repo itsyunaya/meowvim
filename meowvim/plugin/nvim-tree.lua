@@ -4,7 +4,7 @@ local function disableCursorInBuffer()
 	vim.api.nvim_create_autocmd({ "WinEnter", "BufWinEnter" }, {
 		pattern = "NvimTree*",
 		callback = function()
-			local def = vim.api.nvim_get_hl_by_name("Cursor", true)
+			local def = vim.api.nvim_get_hl(0, { name = "Cursor" })
 			vim.api.nvim_set_hl(0, "Cursor", vim.tbl_extend("force", def, { blend = 100 }))
 			vim.opt.guicursor:append("a:Cursor/lCursor")
 		end,
@@ -13,7 +13,7 @@ local function disableCursorInBuffer()
 	vim.api.nvim_create_autocmd({ "BufLeave", "WinClosed" }, {
 		pattern = "NvimTree*",
 		callback = function()
-			local def = vim.api.nvim_get_hl_by_name("Cursor", true)
+			local def = vim.api.nvim_get_hl(0, { name = "Cursor" })
 			vim.api.nvim_set_hl(0, "Cursor", vim.tbl_extend("force", def, { blend = 0 }))
 			vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 		end,
@@ -42,7 +42,7 @@ end
 require("nvim-tree").setup({
 	on_attach = function(bufnr)
 		local treeApi = require("nvim-tree.api")
-		treeApi.config.mappings.default_on_attach(bufnr)
+		treeApi.map.on_attach.default(bufnr)
 
 		-- theme
 

@@ -1,3 +1,4 @@
+-- https://github.com/smoka7/hop.nvim
 require("hop").setup({
 	virtual_cursor = false,
 })
