@@ -10,6 +10,7 @@
 			# things i'm currently messing around with
 			cpp
 			cmake
+			haskell
 
 			# jvm
 			java

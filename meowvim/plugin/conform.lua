@@ -29,6 +29,7 @@ require("conform").setup({
 		rust = { "rustfmt" },
 		kotlin = { "ktlint" },
 		cpp = { "clang_format" },
+		haskell = { "fourmolu", "ormolu" },
 	},
 
 	formatters = {
