@@ -3,3 +3,6 @@ if vim.fn.executable("haskell-language-server-wrapper") == 0 then
 else
 	vim.lsp.enable("hls")
 end
+
+-- haskell doesn't like it when you use tabs instead of spaces
+vim.o.expandtab = true
